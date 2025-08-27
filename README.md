@@ -20,3 +20,54 @@ A UI designer devises intuitive, easy-to-use, and eye-pleasing interfaces for a 
 The UX part stands for thinking out an entire journey of a user’s interaction with a product. A UX designer is, thus, involved in such activities as user research, persona development, information architecture design, wireframing, prototyping, and more. A UI designer, in turn, devises intuitive, easy-to-use, and eye-pleasing interfaces for a product.
 
 A UI/UX designer would accompany you throughout the development lifecycle, helping you achieve business goals via functional and engaging user experiences, as well as analyzing, evaluating, and enhancing those experiences over time.
+
+# 🛠️Technology Stack Overview
+The Airbnb clone project is built with a modern and scalable technology stack, combining frontend, backend, database, and infrastructure tools. Each component plays a unique role in ensuring performance, maintainability, and user experience.
+
+## Frontend
+
+   React.js: A JavaScript library for building interactive, component-based user interfaces. Powers the dynamic and responsive frontend of the application.
+
+   Next.js (optional but recommended): A React framework that adds server-side rendering and static site generation, improving SEO and performance.
+
+  Tailwind CSS: A utility-first CSS framework for building modern, responsive, and consistent UI faster.
+
+## Backend
+
+   Django / Django REST Framework: A high-level Python web framework for building robust backend services and RESTful APIs. Handles core business logic like bookings, listing   s, and user management.
+
+   Node.js (Express.js) (alternative backend): For real-time features (e.g., messaging/notifications) using WebSockets, if required.
+
+## Database
+
+   PostgreSQL: A powerful relational database used for storing structured application data such as users, listings, reservations, and reviews.
+
+   Redis (optional): An in-memory data store used for caching and session management to improve performance.
+
+## API Layer
+
+   GraphQL: A query language for APIs, allowing the frontend to request exactly the data it needs (used alongside or instead of REST endpoints).
+
+## Authentication & Authorization
+
+   JWT (JSON Web Tokens): For secure, stateless authentication between the client and server.
+
+   OAuth (e.g., Google, Facebook login): Enables social logins to simplify user onboarding.
+
+## DevOps & Infrastructure
+
+   Docker & Docker Compose: Containerization for consistent development and deployment across environments.
+
+   Nginx: A reverse proxy and load balancer to serve the frontend and backend efficiently.
+
+   AWS (EC2, S3, RDS, CloudFront): Cloud services for hosting, storage, and scaling the application.
+
+   GitHub Actions (CI/CD): Automates testing, linting, and deployment pipelines for faster iteration.
+
+## Payments
+
+   Stripe / PayPal API: Handles secure online payments for bookings and reservations.
+
+   Testing
+
+   Pytest (for Django) / Jest (for React): Frameworks for writing unit and integration tests to ensure reliability.
