@@ -160,3 +160,103 @@ The Airbnb clone relies on a relational database (e.g., PostgreSQL) to manage st
       A Property can have multiple Reviews (one per guest per booking).
 
       Each Booking has one associated Payment.
+# Feature Breakdown
+   The Airbnb clone includes a set of core features that replicate essential functionalities of the Airbnb platform. Each feature ensures a smooth experience for both hosts and guests, covering the full cycle from property listing to booking and payment.
+
+   1. User Management
+
+   Handles user registration, authentication, and profile management. Users can sign up as hosts, guests, or both, with secure login via email/password or social login (Google/Facebook). This feature ensures secure access control and personalized user experiences.
+
+   2. Property Management
+
+   Allows hosts to list, edit, and delete properties. Each property includes details such as title, description, location, price per night, and images. This feature gives hosts full control over their listings and provides guests with accurate information to browse.
+
+   3. Booking System
+
+   Enables guests to search, view, and reserve available properties for specific dates. The booking system manages availability, prevents double-booking, and tracks reservation statuses (pending, confirmed, cancelled). This ensures smooth coordination between guests and hosts.
+
+   4. Reviews & Ratings
+
+   Guests can leave feedback on properties after their stay, including ratings and comments. Reviews help build trust, guide other users’ decisions, and give hosts valuable insights to improve their listings.
+
+   5. Payments Integration
+
+   Supports secure online payments for reservations using services like Stripe or PayPal. This feature processes transactions, tracks payment statuses, and ensures hosts get paid for confirmed bookings. Secure payments are central to building trust in the platform.
+
+   6. Search & Filtering
+
+   Provides guests with tools to search properties by location, price range, amenities, and availability. This improves discoverability and ensures users can quickly find listings that match their preferences.
+
+   7. Messaging System (Optional Extension)
+
+   Enables direct communication between hosts and guests before and after bookings. This feature supports transparency, clarifies questions, and improves trust between users.
+
+## 🔒API Security
+
+   Security is a core requirement for the Airbnb clone, ensuring that sensitive data such as user credentials, property information, and payment details are protected from unauthorized access or misuse. The following measures are implemented to maintain integrity, confidentiality, and trust within the platform:
+
+   1. Authentication
+
+   Implementation: Secure login and session management using JWT (JSON Web Tokens) or OAuth (e.g., Google/Facebook sign-in).
+
+   Why it matters: Ensures only legitimate users can access the platform, protecting user accounts and preventing impersonation.
+
+   2. Authorization
+
+   Implementation: Role-based access control (RBAC) to restrict actions (e.g., only hosts can create properties, only guests can book).
+
+   Why it matters: Prevents unauthorized users from performing restricted operations, protecting data integrity and business rules.
+
+   3. Data Encryption
+
+   Implementation: Sensitive data (e.g., passwords, tokens) stored using strong hashing algorithms like bcrypt; all API traffic secured with HTTPS/TLS.
+
+   Why it matters: Protects user credentials and sensitive transactions (payments, personal details) from being exposed during storage or transmission.
+
+   4. Rate Limiting & Throttling
+
+   Implementation: Enforce API rate limits to prevent abuse, denial-of-service (DoS) attacks, or brute-force login attempts.
+
+   Why it matters: Preserves system availability and ensures fair usage of resources.
+
+   5. Input Validation & Sanitization
+
+   Implementation: Strict validation of user inputs across endpoints to prevent SQL injection, XSS (Cross-Site Scripting), and other injection attacks.
+
+   Why it matters: Protects the database and user-facing features from malicious payloads.
+
+   6. Secure Payments
+
+   Implementation: Payments processed via trusted third-party providers (e.g., Stripe, PayPal) with PCI-DSS compliance.
+
+   Why it matters: Protects financial data, ensures transaction security, and builds user trust in the platform.
+
+   7. Logging & Monitoring
+
+   Implementation: Maintain audit logs of API requests, authentication events, and payment activity. Use monitoring tools to detect unusual activity.
+
+   Why it matters: Enables quick detection of breaches, fraud attempts, and suspicious behaviors.
+
+   ## ⚙️CI/CD Pipeline
+
+   A CI/CD pipeline (Continuous Integration / Continuous Deployment) automates the process of building, testing, and deploying the application. Every time code is pushed to the repository, the pipeline ensures it is validated, tested, and deployed consistently, reducing manual effort and minimizing errors.
+
+   Why CI/CD is Important for This Project
+
+   Faster Development Cycles: Automates testing and deployment, allowing new features and fixes to be released quickly.
+
+   Improved Code Quality: Runs unit tests and integration tests automatically to catch bugs early.
+
+   Consistency: Ensures all developers deploy in the same way, avoiding environment-related issues.
+
+   Reliability: Continuous monitoring of build and deployment processes ensures a stable application.
+
+   Tools Used
+
+   GitHub Actions: Automates workflows for testing and deploying the project directly from GitHub.
+
+   Docker: Ensures the app runs in consistent environments across development, staging, and production.
+
+   AWS (EC2, S3, RDS) or Heroku/Vercel: For cloud deployment of the application.
+
+   Pytest / Jest: For running automated tests during the CI stage.
