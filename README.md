@@ -77,3 +77,86 @@ Tailwind CSS: A utility-first CSS framework for building modern, responsive, and
 The Airbnb clone relies on a relational database (e.g., PostgreSQL) to manage structured data. The schema is designed to capture users, properties, bookings, reviews, and payments with clear relationships between entities.
 
 ## Key Entities & Fields
+   1. Users
+
+      Represents hosts and guests on the platform.
+
+      id: Primary key, unique identifier for the user
+
+      name: Full name of the user
+
+      email: Unique email address for login and communication
+
+      password_hash: Encrypted password for authentication
+
+      role: Defines if the user is a host, guest, or both
+
+   2. Properties
+
+      Represents listings created by hosts.
+
+      id: Primary key, unique identifier for the property
+
+      title: Name/short description of the property
+
+      location: Address or city of the property
+
+      price_per_night: Cost per night
+
+      host_id: Foreign key referencing the Users table (host relationship)
+
+   3. Bookings
+
+      Represents reservations made by guests.
+
+      id: Primary key, unique identifier for the booking
+
+      property_id: Foreign key referencing Properties
+
+      guest_id: Foreign key referencing Users (the guest)
+
+      start_date: Check-in date
+
+      end_date: Check-out date
+
+      status: Booking status (e.g., confirmed, cancelled, pending)
+
+   4. Reviews
+
+      Represents feedback left by guests on properties.
+
+      id: Primary key, unique identifier for the review
+
+      property_id: Foreign key referencing Properties
+
+      guest_id: Foreign key referencing Users (the reviewer)
+
+      rating: Numeric score (e.g., 1–5 stars)
+
+      comment: Text feedback
+
+   5. Payments
+
+         Represents financial transactions for bookings.
+
+         id: Primary key, unique identifier for the payment
+
+         booking_id: Foreign key referencing Bookings
+
+         amount: Total payment amount
+
+         payment_method: e.g., Credit Card, PayPal, Stripe
+
+         status: Payment status (e.g., successful, failed, refunded)
+
+   Entity Relationships
+
+      A User (host) can create multiple Properties.
+
+      A User (guest) can make multiple Bookings.
+
+      A Booking is always linked to a single Property and one Guest.
+
+      A Property can have multiple Reviews (one per guest per booking).
+
+      Each Booking has one associated Payment.
