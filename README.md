@@ -30,7 +30,8 @@ The Airbnb clone project is built with a modern and scalable technology stack, c
 
    Next.js (optional but recommended): A React framework that adds server-side rendering and static site generation, improving SEO and performance.
 
-  Tailwind CSS: A utility-first CSS framework for building modern, responsive, and consistent UI faster.
+  
+Tailwind CSS: A utility-first CSS framework for building modern, responsive, and consistent UI faster.
 
 ## Backend
 
@@ -71,3 +72,8 @@ The Airbnb clone project is built with a modern and scalable technology stack, c
    Testing
 
    Pytest (for Django) / Jest (for React): Frameworks for writing unit and integration tests to ensure reliability.
+
+# Database Design
+The Airbnb clone relies on a relational database (e.g., PostgreSQL) to manage structured data. The schema is designed to capture users, properties, bookings, reviews, and payments with clear relationships between entities.
+
+## Key Entities & Fields
